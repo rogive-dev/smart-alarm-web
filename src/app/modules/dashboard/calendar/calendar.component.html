@@ -1,0 +1,60 @@
+<div class="calendar-wrapper">
+  <div class="calendar-card-1">
+    <mat-checkbox class="checkbox-text" color="primary">Enlazar cuenta de google</mat-checkbox>
+    <button mat-raised-button color="primary" class="button-calendar">CONTINUE CON GOOGLE</button>
+  </div>
+  <div class="calendar-card-2">
+    <div class="calendar-header">
+      <div></div>
+      <div class="calendar-title">
+        <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+      </div>
+      <div class="calendar-actions">
+        <div class="calendar-actions-group">
+          <button
+            color="primary"
+            mat-mini-fab
+            mwlCalendarPreviousView
+            [view]="view"
+            [(viewDate)]="viewDate"
+            (viewDateChange)="closeOpenMonthViewDay()"
+          >
+            <
+          </button>
+          <button
+            color="primary"
+            mat-mini-fab
+            mwlCalendarToday
+            [(viewDate)]="viewDate"
+          >
+            <mat-icon>calendar_today</mat-icon>
+          </button>
+          <button
+            color="primary"
+            mat-mini-fab
+            mwlCalendarNextView
+            [view]="view"
+            [(viewDate)]="viewDate"
+            (viewDateChange)="closeOpenMonthViewDay()"
+          >
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div [ngSwitch]="view">
+      <mwl-calendar-month-view
+        *ngSwitchCase="CalendarView.Month"
+        [viewDate]="viewDate"
+        [events]="events"
+        [refresh]="refresh"
+        [activeDayIsOpen]="activeDayIsOpen"
+        (dayClicked)="dayClicked($event.day)"
+        (eventClicked)="handleEvent('Clicked', $event.event)"
+        (eventTimesChanged)="eventTimesChanged($event)"
+      >
+      </mwl-calendar-month-view>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,131 @@
+.calendar-wrapper {
+  margin: 26px 38px 56px 47px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-card-1 {
+  border-radius: 50px;
+  border: 2px solid #818CF8;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 1088px;
+  height: 174px;
+}
+
+.calendar-card-2 {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0px;
+  border-radius: 50px;
+  border: 2px solid #818CF8;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 1088px;
+  height: 426px;
+
+  & > .calendar-header {
+    display: flex;
+    align-items: center;
+
+    & > div {
+      width: 33.33%;
+    }
+
+    & > .calendar-actions {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 30px;
+      width: 33.33%;
+      height: 40px;
+      text-align: center!important;
+      vertical-align: middle;
+
+      & > .calendar-actions-group {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 150px;
+        display: inline-flex;
+        border-radius: 0.375rem;
+        & > div {
+          width: 33.33%;
+          cursor: pointer;
+          text-align: center;
+          align-items: center;
+          line-height: 16px;
+        }
+      }
+    }
+
+    & .calendar-title {
+      & > h3 {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  & .cal-day-cell.cal-today {
+    background-color: #EEF2FF !important;
+  }
+
+  & .cal-cell-top {
+    min-height: 30px !important;
+    & .cal-day-badge {
+      background-color: #818CF8 !important;
+      margin-top: 4px !important;
+    }
+  }
+  & .cal-events {
+    margin-left: 8px;
+    & > div[ng-reflect-contents="A long event that spans 2 mont"] {
+      background-color: green !important;
+    }
+    & > div[ng-reflect-contents="A 3 day event"] {
+      background-color: blue !important;
+    }
+    & > div[ng-reflect-contents="A draggable and resizable even"] {
+      background-color: #B3261E !important;
+    }
+    & > div[ng-reflect-contents="An event with no end date"] {
+      background-color: purple !important;
+    }
+  }
+
+  & .cal-cell-row {
+    height: 50px !important;
+    & .cal-day-cell {
+      height: 50px !important;
+      min-height: 50px !important;
+    }
+  }
+
+  & mwl-calendar-open-day-events {
+    display: none;
+  }
+}
+
+.button-calendar {
+  width: 30%;
+  max-width: 400px;
+  min-width: 105px;
+  height: 50px;
+  border-radius: 36px;
+  margin-left: 73px;
+}
+
+.checkbox-text {
+  margin: 40px 0 0 62px;
+}
+.mdc-form-field {
+  label {
+    font-size: 20px;
+  }
+}
