@@ -1,0 +1,82 @@
+<div class="statistics-container">
+  <div class="statistics-wrapper">
+    <div class="statistics-card">
+      <div class="image-container">
+        <img src="../../../../assets/alarm.svg" alt="alarm icon" height="50" width="50"/>
+        <button
+          mat-icon-button
+          aria-label="question tag tooltip"
+          matTooltip="Estas son las alarmas que estableciste el último mes"
+          matTooltipPosition="above"
+          color= "primary"
+          class="tooltip"
+          matTooltipClass="custom-tooltip"
+        >
+          <mat-icon>help</mat-icon>
+        </button>
+      </div>
+      <div class="text-container">
+        <h3>32</h3>
+        <p>Alarmas último mes</p>
+      </div>
+    </div>
+    <div class="statistics-card">
+      <div class="image-container">
+        <img src="../../../assets/alarm-successful.svg" alt="alarm successful icon" height="50" width="50"/>
+        <button
+          mat-icon-button
+          aria-label="question tag tooltip"
+          matTooltip="Porcentaje de alarmas que han sido acertadas en el tiempo para llegar a tu destino"
+          color= "primary"
+          class="tooltip"
+          matTooltipPosition="above"
+        >
+          <mat-icon>help</mat-icon>
+        </button>
+      </div>
+      <div class="text-container align">
+        <h3>90%</h3>
+        <p>Alarmas exitosas</p>
+      </div>
+    </div>
+    <div class="statistics-card">
+      <div class="image-container">
+        <img src="../../../assets/map.svg" alt="map icon" height="50" width="50"/>
+        <button
+          mat-icon-button
+          aria-label="question tag tooltip"
+          matTooltip="Total de Kilómetros recorridos durante el último mes"
+          color= "primary"
+          class="tooltip"
+          matTooltipPosition="above"
+        >
+          <mat-icon>help</mat-icon>
+        </button>
+      </div>
+      <div class="text-container align">
+        <h3>59.000</h3>
+        <p>KM Recorridos</p>
+      </div>
+    </div>
+  </div>
+  <div class="graphics-wrapper">
+    <div class="graphic">
+      <canvas baseChart width="506" height="354"
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [type]="'bar'"
+      >
+      </canvas>
+    </div>
+    <div class="graphic">
+      <canvas baseChart width="506" height="350"
+        [type]="'line'"
+        [data]="lineChartData"
+        [options]="lineChartOptions"
+        [legend]="lineChartLegend">
+      </canvas>
+    </div>
+  </div>
+</div>
