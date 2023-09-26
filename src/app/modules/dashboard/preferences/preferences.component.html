@@ -1,0 +1,31 @@
+<div class="preferences-wrapper">
+  <div class="preferences-card elem-1 mar-1">
+    <div class="preferences-card-wrapper mar-2">
+      <mat-checkbox color="primary">Permitir Notificaciones</mat-checkbox>
+    </div>
+  </div>
+  <div class="preferences-card">
+    <div class="preferences-card-wrapper elem-2">
+      <h5>Notificaciones</h5>
+      <div class="checkbox-wrapper">
+        <mat-checkbox color="primary">Recibir notificaciones push</mat-checkbox>
+        <mat-checkbox color="primary">Recibir notificaciones de correo electrónico</mat-checkbox>
+        <mat-checkbox color="primary">Recibir alertas de tráficos inusual</mat-checkbox>
+      </div>
+      <p class="notifications-text">Recibir notificaciones</p>
+      <mat-form-field>
+        <mat-select
+          name="time"
+          [(value)]="selectedTime"
+        >
+          <mat-option
+            *ngFor="let region of time"
+            [value]="region.value"
+          >
+            {{ region.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
