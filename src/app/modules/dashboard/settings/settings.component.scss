@@ -1,0 +1,55 @@
+.settings-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 55px;
+  overflow-y: auto;
+}
+
+.settings-card {
+  border-radius: 50px;
+  border: 2px solid #818CF8;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 170px;
+  width: 90%;
+  margin: 0 auto;
+  min-width: 500px;
+}
+
+.settings-card-wrapper {
+  padding: 24px 51px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.elem {
+margin-top: 26px;
+}
+
+.elem-2 {
+  gap: 20px;
+}
+
+.elem-3 {
+  gap: 15px;
+}
+
+.button-settings {
+  width: 30%;
+  max-width: 400px;
+  min-width: 105px;
+  height: 50px;
+  border-radius: 36px;
+}
+
+h5 {
+  font-weight: 500;
+}
+
+.mdc-form-field {
+  label {
+    font-size: 20px;
+  }
+}

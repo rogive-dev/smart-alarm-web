@@ -1,0 +1,46 @@
+<div class="settings-wrapper">
+  <div class="settings-card elem">
+    <div class="settings-card-wrapper">
+      <h5>Zona Horaria</h5>
+      <mat-checkbox color="primary">Establecer zona horaria automáticamente</mat-checkbox>
+      <mat-form-field>
+        <mat-select
+          name="regions"
+          [(value)]="selectedRegion"
+        >
+          <mat-option
+            *ngFor="let region of regions"
+            [value]="region.value"
+          >
+            {{ region.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="settings-card">
+    <div class="settings-card-wrapper elem-2">
+      <h5>Lenguaje</h5>
+      <mat-form-field>
+        <mat-select
+          name="regions"
+          [(value)]="selectedLanguage"
+        >
+          <mat-option
+            *ngFor="let language of languages"
+            [value]="language.value"
+          >
+            {{ language.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="settings-card">
+    <div class="settings-card-wrapper elem-3">
+      <h5>Cuenta</h5>
+      <div>Suspende tu cuenta temporalmente</div>
+      <button mat-raised-button color="primary" class="button-settings">SUSPENDER</button>
+    </div>
+  </div>
+</div>
