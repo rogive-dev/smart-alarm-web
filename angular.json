@@ -30,7 +30,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/angular-calendar/css/angular-calendar.css",
+              "src/styles.scss",
+              "src/theme.scss"
             ],
             "scripts": []
           },
@@ -93,6 +95,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/angular-calendar/css/angular-calendar.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -100,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "90c79147-5d18-4905-859f-4f3e8e97fbc7"
   }
 }

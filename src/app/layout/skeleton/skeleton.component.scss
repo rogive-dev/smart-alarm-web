@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 116px);
+  position: fixed;
+  padding: 0;
+}
+
+.main-sidebar {
+  height: 100%;
+  width: 270px;
+  min-width: 270px;
+  background-color: #EEF2FF;
+}

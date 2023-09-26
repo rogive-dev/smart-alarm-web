@@ -1,0 +1,51 @@
+.sidebar-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 56px 0;
+}
+
+li {
+  cursor: pointer;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  & > a {
+    text-decoration: none;
+    &:active {
+      color: #6366F1;
+    }
+    &:visited {
+      color: #1E293B;
+    }
+  }
+}
+
+.round {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.button-sidebar {
+  margin: 46px auto;
+  width: 205px;
+  min-height: 50px;
+  height: 50px;
+  border-radius: 36px;
+}
+
+.round-filled {
+  background-color: #6366F1;
+}

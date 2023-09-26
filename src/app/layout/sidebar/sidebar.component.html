@@ -1,0 +1,41 @@
+<div class="sidebar-wrapper">
+  <ul>
+    <li [routerLink]="['/']">
+      <div
+        class="round"
+        [class.round-filled]="router.url === '/'"
+      ></div>
+      <a>
+        Dashboard
+      </a>
+    </li>
+    <li [routerLink]="['/settings']">
+      <div
+        class="round"
+        [class.round-filled]="router.url === '/settings'"
+      ></div>
+      <a>
+        Ajustes
+      </a>
+    </li>
+    <li [routerLink]="['/preferences']">
+      <div
+        class="round"
+        [class.round-filled]="router.url === '/preferences'"
+      ></div>
+      <a>
+        Preferencias
+      </a>
+    </li>
+    <li [routerLink]="['/calendar']">
+      <div
+        class="round"
+        [class.round-filled]="router.url === '/calendar'"
+      ></div>
+      <a>
+        Calendario
+      </a>
+    </li>
+  </ul>
+  <button mat-raised-button color="primary" class="button-sidebar">SALIR</button>
+</div>
